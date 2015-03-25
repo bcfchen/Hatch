@@ -9,8 +9,12 @@ If you don't have Ionic installed, instructions are available [here](http://ioni
 **Add your platform**
 
     $ ionic platform add ios
-    
-**Run the app with Ionic**
+
+**Run the app on browser**
+
+    $ ionic serve
+
+**Run the app on device (or emulator)**
 
     $ ionic build ios
     $ ionic run ios
