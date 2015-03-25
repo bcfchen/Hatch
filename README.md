@@ -19,7 +19,7 @@ If you don't have Ionic installed, instructions are available [here](http://ioni
     $ ionic build ios
     $ ionic run ios
 
-## Testing
+## UI Testing
 **Setting up Protractor**
 
 If you don't have Protractor setup yet, follow the instructions below:
@@ -30,7 +30,6 @@ If you don't have Protractor setup yet, follow the instructions below:
 
 2. Install/update webdriver
 
-
     `webdriver-manager update`
 
 **Running Protractor tests**
@@ -39,7 +38,7 @@ If you don't have Protractor setup yet, follow the instructions below:
 
     `webdriver-manager start`
 
-2. cd into the folder containing the Protractor config file, which is:
+2. cd into the folder containing the Protractor config file, which is
 
     `www/test/e2e/conf.js`
 
