@@ -1,6 +1,6 @@
 Hatch
 =====================
-Ideas sharing app based on Ionic Framework
+Idea sharing app based on Ionic Framework
 ## Getting Started
 **Install Ionic**
 
