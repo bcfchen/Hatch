@@ -1,0 +1,32 @@
+<ion-view title='<span ng-click="vm.toHome()">hatch</span>' ng-controller="NewCtrl as vm">
+    <ion-content class="has-header">
+        <td-cards>
+            <td-card id="td-card" ng-repeat="idea in vm.cards" on-destroy="cardDestroyed($index)" on-transition-left="cardSwipedLeft($index)" on-transition-right="cardSwipedRight(idea)">
+                <div class="item" style="color:grey;">
+                    {{idea.idea}}
+                    <p style="height:20px;width:60px;position:absolute;right:10px;top:35%">{{idea.likes}} likes</p>
+                </div>
+                <div class="image">
+                    <div class="no-text overlayBox">
+                        <div class="noBox boxed"></div>
+                    </div>
+                    <img ng-src="{{idea.image}}">
+                    <div class="yes-text overlayBox">
+                        <div class="yesBox boxed" id="centerMe">
+                            Like
+                        </div>
+                    </div>
+                </div>
+            </td-card>
+        </td-cards>
+
+    </ion-content>
+    <ion-footer-bar align-title="left" class="bar" style="opacity:0.7">
+        <div class="bar bar-footer">
+            <div class="title" style="color:#A4AAAB">Post your awesome idea!</div>
+            <button class="button button-clear" ng-click="vm.showPopup()">
+                <i class="icon ion-compose icon-accessory"></i>
+            </button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

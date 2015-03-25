@@ -1,0 +1,18 @@
+<ion-view ng-controller="AlertsCtrl as vm" title='<a href="#/home/trending" style="text-decoration: none;">hatch</a>'>
+    <ion-nav-bar class="bar-assertive">
+        <ion-nav-buttons side="left">
+            <a style="color: white;" class="button button-icon icon icon ion-ios7-bell" ng-href="#/app/alerts"></a>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+            <a style="color: white;" class="button button-icon icon ion-ios7-person-outline" ng-href="#/tab/profile"></a>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content class="has-header" on-swipe-left="vm.onSwipeLeft()">
+        <div class="card" ng-repeat="activity in vm.activities">
+            <div class="item item-icon-right" ng-click="vm.toIdea(activity)" style="font-size:12px;">
+                <span class="span-energized" style="font-weight:bold;">{{activity.name}}</span> commented on idea "{{activity.idea}}"
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,19 @@
+<ion-view title="hatch">
+    <ion-nav-bar class="bar-assertive">
+        <ion-nav-buttons side="left">
+            <a style="color: white;" class="comments-link button button-icon icon ion-ios7-bell-outline" ng-href="#/tab/alerts"></a>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+            <a style="color: white;" class="profile-link button button-icon icon ion-ios7-person-outline" ng-href="#/tab/profile"></a>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-tabs class="tabs-energized">
+        <ion-tab id="trending-tab" title="Trending" href="tab.home.trending">
+            <ion-nav-view name="trendingPage"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab id="new-tab" title="New" ui-sref="tab.home.new">
+            <ion-nav-view name="newPage"></ion-nav-view>
+        </ion-tab>
+    </ion-tabs>
+</ion-view>

@@ -1,0 +1,30 @@
+<ion-view title='<a href="#/home/trending" id="headerTitle" style="text-decoration: none;">hatch</a>' ng-controller="IdeaCtrl as vm">
+    <ion-nav-bar class="bar-assertive">
+        <ion-nav-buttons side="right">
+            <a style="color: white;" id="add-comment" class="button button-icon icon ion-ios7-plus-empty" ng-click="vm.showPopup()"></a>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content class="has-header" on-swipe-left="vm.onSwipeLeft()">
+        <div class="card">
+            <div class="item item-divider" style="background-color:#fff;font-size:10px;color:#A4AAAB">
+                <p style="font-size:10px;float:left;">{{vm.idea.likes}} likes</p>
+                <img class="likeImage" src="img/ios7-heart-outline.png" style="height:20px;width:20px;position:absolute;right:10px;top:25%" ng-click="vm.like()">
+            </div>
+            <div style="position:relative;">
+                <img class="" ng-src={{vm.idea.image}} style="height:100%;width:100%;">
+                <p style="position:absolute;padding-left:5px;bottom:-5px;color:#fff;width:100%;background-color:#424242;opacity:0.7;">{{vm.idea.author}}, {{vm.idea.authorTitle}}</p>
+            </div>
+            <div class="item item-divider" style="background-color:#fff;font-size:10px;color:#A4AAAB">
+                {{vm.idea.idea}}
+            </div>
+        </div>
+        <span class="item item-divider item-energized" style- "font-weight:bold;">Comments</span>
+        <div class="list">
+            <a class="item item-icon-right" ng-repeat="comment in vm.comments">
+                <p>{{comment.name}} says:</p>
+                <p>{{comment.comment}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

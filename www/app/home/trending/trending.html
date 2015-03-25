@@ -1,0 +1,31 @@
+<ion-view title='<span ng-click="vm.toHome()" class="headerTitle">hatch</span>' ng-controller="TrendingCtrl as vm">
+    <ion-content class="has-header" on-swipe-left="vm.onSwipeLeft()" on-swipe-right="vm.onSwipeRight()">
+        <div class="row">
+            <div class="col col-50 clock" ng-repeat="list in vm.ideasColumns" style="text-align:center">
+                <div class="card" ng-repeat="idea in list">
+                    <div class="item item-divider" style="background-color:#fff;font-size:10px;color:#A4AAAB">
+                        <p style="font-size:10px;float:left;">{{idea.likes}} likes</p>
+                        <img class="heartImage" src="img/ios7-heart-outline.png" style="height:20px;width:20px;position:absolute;right:10px;top:25%" ng-click="vm.like(idea)">
+                    </div>
+                    <div style="position:relative;height:150px;width:100%;padding:0px;">
+                        <img class="ideaImage" ng-click="vm.toIdea(idea)" ng-src={{idea.image}} style="height:100%;width:100%;">
+                        <p style="position:absolute;padding-left:5px;bottom:-10px;color:#fff;width:100%;background-color:#424242;opacity:0.7;">{{idea.author}}, {{idea.authorTitle}}</p>
+                    </div>
+
+                    <div class="item item-divider" style="background-color:#fff;font-size:10px;color:#A4AAAB">
+                        {{idea.idea}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+    <ion-footer-bar align-title="left" class="bar" style="opacity:0.7">
+        <div class="bar bar-footer">
+            <div class="title" style="color:#A4AAAB">Post your awesome idea!</div>
+            <button class="button button-clear" ng-click="vm.showPopup()">
+                <i class="icon ion-compose icon-accessory"></i>
+            </button>
+        </div>
+    </ion-footer-bar>
+</ion-view>
