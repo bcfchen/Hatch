@@ -1,12 +1,15 @@
 angular.module("hatchApp", ["ionic",
+        "ngCordovaOauth",
+    "ngCordova",
+    "app.login",
     "app.alerts",
-    "app.profile",
     "app.home",
-    "app.idea",
     "app.profile",
+    "app.idea",
     "angular-data.DSCacheFactory",
     "ionic.contrib.ui.tinderCards",
-    "underscore"
+    "underscore",
+    "firebase"
 ])
 
 .run(function($ionicPlatform, DSCacheFactory) {
@@ -23,13 +26,19 @@ angular.module("hatchApp", ["ionic",
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     $stateProvider
-        .state("tab", {
-            abstract: true,
-            url: "/tab",
-            templateUrl: "app/layout/layout.html"
-        });
+      .state('login', {
+        url: '/login',
+        templateUrl: 'app/login/login.html'
+        }
+      )
+    .state("tab", {
+        abstract: true,
+        url: "/tab",
+        templateUrl: "app/layout/layout.html"
+    });
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise("/tab/home/trending");
+    //$urlRouterProvider.otherwise("/tab/home/trending");
+   $urlRouterProvider.otherwise('/login');
 
     //config nav tabs to be on bottom instead of top for android
     //$ionicConfigProvider.tabs.style("standard");

@@ -6,3 +6,4 @@ platforms/
 plugins/
 hooks/
 npm-debug.log
+.bowerrc

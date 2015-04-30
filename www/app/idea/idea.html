@@ -1,4 +1,4 @@
-<ion-view title='<a href="#/home/trending" id="headerTitle" style="text-decoration: none;">hatch</a>' ng-controller="IdeaCtrl as vm">
+<ion-view title='<a href="#/tab/home/trending" id="headerTitle" style="text-decoration: none;">hatch</a>' ng-controller="IdeaCtrl as vm">
     <ion-nav-bar class="bar-assertive">
         <ion-nav-buttons side="right">
             <a style="color: white;" id="add-comment" class="button button-icon icon ion-ios7-plus-empty" ng-click="vm.showPopup()"></a>
@@ -11,11 +11,11 @@
                 <img class="likeImage" src="img/ios7-heart-outline.png" style="height:20px;width:20px;position:absolute;right:10px;top:25%" ng-click="vm.like()">
             </div>
             <div style="position:relative;">
-                <img class="" ng-src={{vm.idea.image}} style="height:100%;width:100%;">
-                <p style="position:absolute;padding-left:5px;bottom:-5px;color:#fff;width:100%;background-color:#424242;opacity:0.7;">{{vm.idea.author}}, {{vm.idea.authorTitle}}</p>
+                <img class="" ng-src="data:image/jpeg;base64,{{vm.idea.image}}" style="height:100%;width:100%;">
+                <p style="position:absolute;padding-left:5px;bottom:-5px;color:#fff;width:100%;background-color:#424242;opacity:0.7;">{{vm.idea.author.name}}</p>
             </div>
             <div class="item item-divider" style="background-color:#fff;font-size:10px;color:#A4AAAB">
-                {{vm.idea.idea}}
+                {{vm.idea.name}}
             </div>
         </div>
         <span class="item item-divider item-energized" style- "font-weight:bold;">Comments</span>

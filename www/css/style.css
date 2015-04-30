@@ -1,3 +1,20 @@
+/* login page */
+#login-page {
+    background-size: 100% !important; 
+    background-position:center;
+    background-image: url('../img/splash.gif') !important;
+}
+
+#login-page .login-container {
+    position:absolute;
+    bottom:30px;
+    width:100%;
+}
+
+#login-page .login-text {
+    text-align:center;
+}
+
 /* Card styling */
  
 td-cards {
@@ -75,9 +92,10 @@ td-card img {
     color: grey;/*rgb(256, 0, 0);*/
     -webkit-transform: rotate(25deg);
 }
- 
-.fade {
+
+
+/*.fade {
     -webkit-transition: 0.2s opacity linear;
     transition: 0.2s opacity linear;
     opacity: 0;
-}
+}*/

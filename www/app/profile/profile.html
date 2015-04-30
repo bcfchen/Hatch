@@ -1,4 +1,4 @@
-<ion-view title='<a href="#/home/trending" style="text-decoration: none;">hatch' ng-controller="ProfileCtrl as vm">
+<ion-view title='<a href="#/tab/home/trending"  style="text-decoration: none;">hatch' ng-controller="ProfileCtrl as vm">
     <ion-nav-bar class="bar-assertive">
         <ion-nav-buttons side="left">
             <a style="color: white;" class="button button-icon icon ion-ios7-bell-outline" ng-click="clickCreaElencoSpese()" ng-href="#/tab/alerts"></a>
@@ -9,7 +9,7 @@
     </ion-nav-bar>
     <ion-content class="has-header" on-swipe-right="vm.onSwipeRight()">
         <div class="card">
-            <img class="item" src={{vm.profile.profileImage}} style="height:100%;width:100%;">
+            <img class="item" ng-src="{{vm.user.image}}" style="height:100%;width:100%;">
         </div>
         <div class="card">
             <div class="item item-divider item-energized">
@@ -33,11 +33,11 @@
                         <img src="img/ios7-heart-outline.png" style="height:20px;width:20px;position:absolute;right:10px;top:25%" ng-click="vm.like(idea)">
                     </div>
                     <div style="position:relative;height:150px;width:100%;padding:0px;">
-                        <img class="" ng-click="vm.toIdea(idea)" ng-src={{idea.image}} style="height:100%;width:100%;">
+                        <img class="" ng-click="vm.toIdea(idea)" ng-src="data:image/jpeg;base64,{{idea.image}}" style="height:100%;width:100%;">
                     </div>
 
                     <div class="item item-divider" style="background-color:#fff;font-size:10px;color:#A4AAAB">
-                        {{idea.idea}}
+                        {{idea.name}}
                     </div>
                 </div>
             </div>

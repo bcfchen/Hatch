@@ -2,10 +2,12 @@
 	angular.module("app.idea").controller("IdeaCtrl", ["$scope", "$stateParams","$state", "hatchApi", "$ionicPopup" ,IdeaCtrl]);
 	function IdeaCtrl($scope, $stateParams, $state, hatchApi, $ionicPopup){
 		var vm = this;
-		var ideaId = Number($stateParams.id);
-		var currentUser = hatchApi.getCurrentUser();
+		var ideaId = $stateParams.id;
 
 		vm.idea = hatchApi.getIdea(ideaId);
+		vm.home = function(){
+			alert('hi');
+		}
 		refreshComments();
 
 		vm.like = function(){

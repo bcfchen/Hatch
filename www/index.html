@@ -13,6 +13,8 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
+        <script src="lib/ng-cordova-oauth/ng-cordova-oauth.min.js"></script> 
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>    
     <script src="cordova.js"></script>
     <script src="lib/angular-cache/dist/angular-cache.min.js"></script>
 
@@ -21,17 +23,19 @@
     <script src="lib/angular-underscore-module/angular-underscore-module.js"></script>   
     <script src="lib/collide/collide.js"></script>
     <script src="lib/ionic-contrib-tinder-cards/ionic.tdcards.js"></script>
-
+    <script src='lib/firebase/firebase.js'></script>
+    <script src="lib/angularfire/dist/angularfire.min.js"></script>
     <!-- your app's js -->
     <script src="app/app.js"></script>
 
     <!-- services -->
     <script src="app/services/services.mod.js"></script>    
     <script src="app/services/hatchApi.js"></script>
+    <script src="app/services/localStorageService.js"></script>   
 
-    <!-- profile -->
-    <script src="app/profile/profile.mod.js"></script>    
-    <script src="app/profile/profile-ctrl.js"></script>
+    <!-- login -->
+    <script src="app/login/login.mod.js"></script>
+    <script src="app/login/login-ctrl.js"></script>    
 
     <!-- idea -->
     <script src="app/idea/idea.mod.js"></script>
@@ -39,8 +43,12 @@
 
     <!-- home -->
     <script src="app/home/home.mod.js"></script>
-    <script src="app/home/new/new-ctrl.js"></script>
-    <script src="app/home/trending/trending-ctrl.js"></script>   
+    <script src="app/home/new/new-ctrl.js"></script>  
+    <script src="app/home/trending/trending-ctrl.js"></script>  
+
+    <!-- profile -->
+    <script src="app/profile/profile.mod.js"></script>
+    <script src="app/profile/profile-ctrl.js"></script>
 
     <!-- alerts -->
     <script src="app/alerts/alerts.mod.js"></script>
